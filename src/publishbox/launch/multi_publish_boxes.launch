@@ -1,0 +1,25 @@
+<launch>
+    <group ns="typhoon_h480_0">
+        <node pkg="publishbox" type="publishBox" name="publishBox" output="screen" />
+    </group>
+
+    <group ns="typhoon_h480_1">
+        <node pkg="publishbox" type="publishBox" name="publishBox" output="screen"/>
+    </group>
+
+    <group ns="typhoon_h480_2">
+        <node pkg="publishbox" type="publishBox" name="publishBox"/>
+    </group>
+
+    <group ns="typhoon_h480_3">
+        <node pkg="publishbox" type="publishBox" name="publishBox"/>
+    </group>
+
+    <group ns="typhoon_h480_4">
+        <node pkg="publishbox" type="publishBox" name="publishBox" />
+    </group>
+
+    <group ns="typhoon_h480_5">
+        <node pkg="publishbox" type="publishBox" name="publishBox" />
+    </group>
+</launch>

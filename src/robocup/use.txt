@@ -1,0 +1,16 @@
+roslaunch px4 robocup2_fly.launch
+
+qifei 
+
+
+bash multi_gimbal_control.sh
+
+roslaunch robocup get_image_depth_multi.launch
+
+rostopic pub -r 20 /typhoon_h480_0/xy_goal robocup/goal_xy_in_picture           
+	"goal_id: 0 
+	x: 320 
+	y: 240" 
+
+rostopic echo /typhoon_h480_0/track_point_xy
+rostopic echo /actor_green_info

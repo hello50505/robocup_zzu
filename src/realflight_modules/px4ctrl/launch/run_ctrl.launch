@@ -1,0 +1,122 @@
+<launch>
+
+<arg name="drone_name" value="typhoon_h480" />
+
+<arg name="drone_id" value="0" />
+<group ns="$(arg drone_name)_0">
+	<node pkg="px4ctrl" type="px4ctrl_node" name="px4ctrl"  output="screen">
+		<remap from="~odom" to="/$(arg drone_name)_$(arg drone_id)/odom_world" />
+		<remap from="~cmd" to="/$(arg drone_name)_$(arg drone_id)/planning/pos_cmd" />
+
+		<!-- mavros -->
+		<remap from="/mavros/state" to="/$(arg drone_name)_$(arg drone_id)/mavros/state"/>
+		<remap from="/mavros/extended_state" to="/$(arg drone_name)_$(arg drone_id)/mavros/extended_state"/>
+		<remap from="/mavros/imu/data" to="/$(arg drone_name)_$(arg drone_id)/mavros/imu/data"/>
+		<remap from="/mavros/rc/in" to="/$(arg drone_name)_$(arg drone_id)/mavros/rc/in"/>
+		<remap from="/mavros/battery" to="/$(arg drone_name)_$(arg drone_id)/mavros/battery"/>
+		<remap from="/mavros/setpoint_raw/attitude" to="/$(arg drone_name)_$(arg drone_id)/mavros/setpoint_raw/attitude"/>
+		<remap from="/mavros/set_mode" to="/$(arg drone_name)_$(arg drone_id)/mavros/set_mode"/>
+		<remap from="/mavros/cmd/arming" to="/$(arg drone_name)_$(arg drone_id)/mavros/cmd/arming"/>
+		<remap from="/mavros/cmd/command" to="/$(arg drone_name)_$(arg drone_id)/mavros/cmd/command"/>
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+	</node>
+</group>
+
+
+
+<group ns="$(arg drone_name)_1">
+	<node pkg="px4ctrl" type="px4ctrl_node" name="px4ctrl" output="screen">
+		<remap from="~odom" to="/$(arg drone_name)_1/odom_world" />
+		<remap from="~cmd" to="/$(arg drone_name)_1/planning/pos_cmd" />
+
+	
+		<remap from="/mavros/state" to="/$(arg drone_name)_1/mavros/state"/>
+		<remap from="/mavros/extended_state" to="/$(arg drone_name)_1/mavros/extended_state"/>
+		<remap from="/mavros/imu/data" to="/$(arg drone_name)_1/mavros/imu/data"/>
+		<remap from="/mavros/rc/in" to="/$(arg drone_name)_1/mavros/rc/in"/>
+		<remap from="/mavros/battery" to="/$(arg drone_name)_1/mavros/battery"/>
+		<remap from="/mavros/setpoint_raw/attitude" to="/$(arg drone_name)_1/mavros/setpoint_raw/attitude"/>
+		<remap from="/mavros/set_mode" to="/$(arg drone_name)_1/mavros/set_mode"/>
+		<remap from="/mavros/cmd/arming" to="/$(arg drone_name)_1/mavros/cmd/arming"/>
+		<remap from="/mavros/cmd/command" to="/$(arg drone_name)_1/mavros/cmd/command"/>
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+	</node>
+</group>
+
+
+<group ns="$(arg drone_name)_2">
+	<node pkg="px4ctrl" type="px4ctrl_node" name="px4ctrl" output="screen" >
+		<remap from="~odom" to="/$(arg drone_name)_2/odom_world" />
+		<remap from="~cmd" to="/$(arg drone_name)_2/planning/pos_cmd" />
+
+		
+		<remap from="/mavros/state" to="/$(arg drone_name)_2/mavros/state"/>
+		<remap from="/mavros/extended_state" to="/$(arg drone_name)_2/mavros/extended_state"/>
+		<remap from="/mavros/imu/data" to="/$(arg drone_name)_2/mavros/imu/data"/>
+		<remap from="/mavros/rc/in" to="/$(arg drone_name)_2/mavros/rc/in"/>
+		<remap from="/mavros/battery" to="/$(arg drone_name)_2/mavros/battery"/>
+		<remap from="/mavros/setpoint_raw/attitude" to="/$(arg drone_name)_2/mavros/setpoint_raw/attitude"/>
+		<remap from="/mavros/set_mode" to="/$(arg drone_name)_2/mavros/set_mode"/>
+		<remap from="/mavros/cmd/arming" to="/$(arg drone_name)_2/mavros/cmd/arming"/>
+		<remap from="/mavros/cmd/command" to="/$(arg drone_name)_2/mavros/cmd/command"/>
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+	</node>
+</group>
+-
+<group ns="$(arg drone_name)_3">
+	<node pkg="px4ctrl" type="px4ctrl_node" name="px4ctrl" >
+		<remap from="~odom" to="/$(arg drone_name)_3/odom_world" />
+		<remap from="~cmd" to="/$(arg drone_name)_3/planning/pos_cmd" />
+
+		
+		<remap from="/mavros/state" to="/$(arg drone_name)_3/mavros/state"/>
+		<remap from="/mavros/extended_state" to="/$(arg drone_name)_3/mavros/extended_state"/>
+		<remap from="/mavros/imu/data" to="/$(arg drone_name)_3/mavros/imu/data"/>
+		<remap from="/mavros/rc/in" to="/$(arg drone_name)_3/mavros/rc/in"/>
+		<remap from="/mavros/battery" to="/$(arg drone_name)_3/mavros/battery"/>
+		<remap from="/mavros/setpoint_raw/attitude" to="/$(arg drone_name)_3/mavros/setpoint_raw/attitude"/>
+		<remap from="/mavros/set_mode" to="/$(arg drone_name)_3/mavros/set_mode"/>
+		<remap from="/mavros/cmd/arming" to="/$(arg drone_name)_3/mavros/cmd/arming"/>
+		<remap from="/mavros/cmd/command" to="/$(arg drone_name)_3/mavros/cmd/command"/>
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+	</node>
+</group>
+
+<group ns="$(arg drone_name)_4">
+	<node pkg="px4ctrl" type="px4ctrl_node" name="px4ctrl" >
+		<remap from="~odom" to="/$(arg drone_name)_4/odom_world" />
+		<remap from="~cmd" to="/$(arg drone_name)_4/planning/pos_cmd" />
+
+		<remap from="/mavros/state" to="/$(arg drone_name)_4/mavros/state"/>
+		<remap from="/mavros/extended_state" to="/$(arg drone_name)_4/mavros/extended_state"/>
+		<remap from="/mavros/imu/data" to="/$(arg drone_name)_4/mavros/imu/data"/>
+		<remap from="/mavros/rc/in" to="/$(arg drone_name)_4/mavros/rc/in"/>
+		<remap from="/mavros/battery" to="/$(arg drone_name)_4/mavros/battery"/>
+		<remap from="/mavros/setpoint_raw/attitude" to="/$(arg drone_name)_4/mavros/setpoint_raw/attitude"/>
+		<remap from="/mavros/set_mode" to="/$(arg drone_name)_4/mavros/set_mode"/>
+		<remap from="/mavros/cmd/arming" to="/$(arg drone_name)_4/mavros/cmd/arming"/>
+		<remap from="/mavros/cmd/command" to="/$(arg drone_name)_4/mavros/cmd/command"/>
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+	</node>
+</group>
+
+<group ns="$(arg drone_name)_5">
+	<node pkg="px4ctrl" type="px4ctrl_node" name="px4ctrl" >
+		<remap from="~odom" to="/$(arg drone_name)_5/odom_world" />
+		<remap from="~cmd" to="/$(arg drone_name)_5/planning/pos_cmd" />
+		
+		<remap from="/mavros/state" to="/$(arg drone_name)_5/mavros/state"/>
+		<remap from="/mavros/extended_state" to="/$(arg drone_name)_5/mavros/extended_state"/>
+		<remap from="/mavros/imu/data" to="/$(arg drone_name)_5/mavros/imu/data"/>
+		<remap from="/mavros/rc/in" to="/$(arg drone_name)_5/mavros/rc/in"/>
+		<remap from="/mavros/battery" to="/$(arg drone_name)_5/mavros/battery"/>
+		<remap from="/mavros/setpoint_raw/attitude" to="/$(arg drone_name)_5/mavros/setpoint_raw/attitude"/>
+		<remap from="/mavros/set_mode" to="/$(arg drone_name)_5/mavros/set_mode"/>
+		<remap from="/mavros/cmd/arming" to="/$(arg drone_name)_5/mavros/cmd/arming"/>
+		<remap from="/mavros/cmd/command" to="/$(arg drone_name)_5/mavros/cmd/command"/>
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+	</node>
+</group>
+
+
+ </launch>

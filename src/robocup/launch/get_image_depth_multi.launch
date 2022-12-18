@@ -1,0 +1,182 @@
+<launch>
+   
+
+    <group ns="typhoon_h480_0">
+
+        <param name="drone_name" value="typhoon_h480"/>
+        <param name="drone_id" value="0"/> 
+        <param name="max_err" value="2" />     
+    <!-- <node pkg="publishBox" type="publishBox" name="publishBox"/> -->
+
+
+        <node pkg="robocup" name="get_image_depth" type="get_image_depth.py" >   
+        </node>
+
+        
+        <node pkg="robocup" name="pub_tf" type="pub_tf.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="0"/>
+        </node> 
+
+        <node pkg="robocup" name="transfer_back_tf" type="transfer_back.py" output="screen" >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="0"/>
+        </node> 
+         <node pkg="robocup" name="pub_cam_pose" type="pub_cam_pose.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="0"/>
+        </node> 
+
+
+        <!-- <node pkg="robocup" name="logic6" type="logic6" output="screen" >  
+            <remap from="move_base/goal" to="drone_0_ego_planner_node/move_base_simple/goal" />
+        </node> -->
+    </group>
+
+
+
+    <group ns="typhoon_h480_1">
+
+        <param name="drone_name" value="typhoon_h480"/>
+            <param name="drone_id" value="1"/> 
+            <param name="max_err" value="2" />     
+        <!-- <node pkg="publishBox" type="publishBox" name="publishBox"/> -->
+
+         <node pkg="robocup" name="get_image_depth" type="get_image_depth.py" >   
+        </node>
+
+        
+        <node pkg="robocup" name="pub_tf" type="pub_tf.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="1"/>
+        </node> 
+
+        <node pkg="robocup" name="transfer_back_tf" type="transfer_back.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="1"/>
+        </node> 
+            <node pkg="robocup" name="pub_cam_pose" type="pub_cam_pose.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="1"/>
+        </node> 
+        <!-- <node pkg="robocup" name="logic6" type="logic6"  >  
+            <remap from="move_base/goal" to="drone_1_ego_planner_node/move_base_simple/goal" />
+        </node> -->
+
+    </group>
+
+
+    <group ns="typhoon_h480_2">
+
+        <param name="drone_name" value="typhoon_h480"/>
+            <param name="drone_id" value="2"/> 
+            <param name="max_err" value="2" />     
+        <!-- <node pkg="publishBox" type="publishBox" name="publishBox"/> -->
+
+        <node pkg="robocup" name="get_image_depth" type="get_image_depth.py">   
+        </node>
+
+        <node pkg="robocup" name="pub_tf" type="pub_tf.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="2"/>
+        </node> 
+        <node pkg="robocup" name="transfer_back_tf" type="transfer_back.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="2"/>
+        </node> 
+            <node pkg="robocup" name="pub_cam_pose" type="pub_cam_pose.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="2"/>
+        </node> 
+        <!-- <node pkg="robocup" name="logic6" type="logic6"  > 
+            <remap from="move_base/goal" to="drone_2_ego_planner_node/move_base_simple/goal" /> 
+        </node> -->
+    </group>
+<group ns="typhoon_h480_3">
+
+        <param name="drone_name" value="typhoon_h480"/>
+            <param name="drone_id" value="3"/> 
+            <param name="max_err" value="2" />     
+        <!-- <node pkg="publishBox" type="publishBox" name="publishBox"/> -->
+
+        <node pkg="robocup" name="get_image_depth" type="get_image_depth.py">   
+        </node>
+
+        <node pkg="robocup" name="pub_tf" type="pub_tf.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="3"/>
+        </node> 
+        <node pkg="robocup" name="transfer_back_tf" type="transfer_back.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="3"/>
+        </node> 
+            <node pkg="robocup" name="pub_cam_pose" type="pub_cam_pose.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="3"/>
+        </node> 
+        <!-- <node pkg="robocup" name="logic6" type="logic6"  > 
+            <remap from="move_base/goal" to="drone_2_ego_planner_node/move_base_simple/goal" /> 
+        </node> -->
+    </group>
+<group ns="typhoon_h480_4">
+
+        <param name="drone_name" value="typhoon_h480"/>
+            <param name="drone_id" value="4"/> 
+            <param name="max_err" value="2" />     
+        <!-- <node pkg="publishBox" type="publishBox" name="publishBox"/> -->
+
+        <node pkg="robocup" name="get_image_depth" type="get_image_depth.py">   
+        </node>
+
+        <node pkg="robocup" name="pub_tf" type="pub_tf.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="4"/>
+        </node> 
+        <node pkg="robocup" name="transfer_back_tf" type="transfer_back.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="4"/>
+        </node> 
+            <node pkg="robocup" name="pub_cam_pose" type="pub_cam_pose.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="4"/>
+        </node> 
+        <!-- <node pkg="robocup" name="logic6" type="logic6"  > 
+            <remap from="move_base/goal" to="drone_2_ego_planner_node/move_base_simple/goal" /> 
+        </node> -->
+    </group>
+   
+
+   <group ns="typhoon_h480_5">
+
+        <param name="drone_name" value="typhoon_h480"/>
+            <param name="drone_id" value="5"/> 
+            <param name="max_err" value="2" />     
+        <!-- <node pkg="publishBox" type="publishBox" name="publishBox"/> -->
+
+        <node pkg="robocup" name="get_image_depth" type="get_image_depth.py">   
+        </node>
+
+        <node pkg="robocup" name="pub_tf" type="pub_tf.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="5"/>
+        </node> 
+        <node pkg="robocup" name="transfer_back_tf" type="transfer_back.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="5"/>
+        </node> 
+            <node pkg="robocup" name="pub_cam_pose" type="pub_cam_pose.py"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="5"/>
+        </node> 
+        <!-- <node pkg="robocup" name="logic6" type="logic6"  > 
+            <remap from="move_base/goal" to="drone_2_ego_planner_node/move_base_simple/goal" /> 
+        </node> -->
+    </group>
+
+
+
+
+
+
+
+</launch>

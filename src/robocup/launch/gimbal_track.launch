@@ -1,0 +1,20 @@
+ <launch>
+   
+ <group ns="typhoon_h480_0">
+
+        <node pkg="robocup" name="gimbal_track" type="gimbal_track.py" output="screen"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="0"/>
+        </node> 
+    </group>
+    
+     <group ns="typhoon_h480_1">
+        <node pkg="robocup" name="gimbal_track" type="gimbal_track.py" output="screen"  >
+            <param name="~drone_name" value="typhoon_h480"/>
+            <param name="~drone_id" value="1"/>
+        </node> 
+    </group>
+
+
+    </launch>
+   

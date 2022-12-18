@@ -1,0 +1,1 @@
+bool gimbal_track_mode

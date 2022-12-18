@@ -1,0 +1,46 @@
+
+
+
+######################################################v2:
+1.
+roslaunch px4 robocup_zzu.launch
+
+####################################(python2(ubuntu18) is different with python3(ubuntu 20))
+2.
+cd ~/1123 &&  cd sh && sh  shortcut.sh    
+
+
+
+
+##################################################################v2/
+
+
+
+
+
+
+v1:
+multi_ego
+########goal can't be  too difficult!!!!
+1.roslaunch px4 robocup.launch 
+
+ cd ~/Documents/px4_ctrl_ws/  && source devel/setup.bash && 
+bash python/multi_gimbal_control.sh 
+ 
+roslaunch ego_planner my_odom_world.launch 
+
+ roslaunch ego_planner my_ego_transfer.launch 
+
+2.
+cd ~/Documents/px4_ctrl_ws/  && source devel/setup.bash &&
+roslaunch px4ctrl run_ctrl.launch 
+
+sh shfiles/takeoff.sh
+
+3.cd ~/Documents/px4_ctrl_ws/  && source devel/setup.bash &&
+
+cd python && rviz -d ego_swarm_rviz.rviz
+roslaunch ego_planner my_multi_uav.launch 
+
+4.cd ~/Documents/px4_ctrl_ws/  && source devel/setup.bash &&cd python&&
+bash ego_swarm_goal.sh
